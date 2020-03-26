@@ -1,0 +1,223 @@
+/**
+ * fil: css/style.css
+ **/
+
+/* Nav bar layout */ 
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+body {margin:0;}
+
+ul {
+list-style-type: none;
+display: flex;
+margin: 0;
+padding: 1,0rem 1rem;
+overflow: hidden;
+background-color: beige;
+position: fixed;
+top: 0;
+width: 100%;
+justify-content: space-between
+}
+
+li {
+float: left;
+text-align: center;
+    
+}
+
+li a {
+display: inline-block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover:not(.active) {
+background-color: #111;
+}
+
+.active {
+background-color: black;
+}
+
+/*header m skrift*/
+
+.header {
+margin-bottom: 20px;
+padding: 50px;
+text-align: center;
+background: #1abc9c;
+color: white;
+font-size: 30px;
+width: 100%;
+}
+
+/* Generalt til grid */
+.navbar {
+grid-area: navbar;
+}
+
+.header {
+grid-area: header;
+}
+
+.post-image-1 {
+grid-area: artikel1;
+ }   
+
+.post-image-2 {
+grid-area: artikel2;
+ }   
+
+.post-image-3 {
+grid-area: artikel3;
+ }   
+
+
+/*3 kolonner til tekst*/
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+body{
+font-family: sans-serif;
+}
+
+.post-list{
+display: grid;
+grid-template-rows:auto;
+grid-template-areas:
+    'navbar navbar navbar'
+    'header header header'
+    'artikel1, artikel2, artikel3'
+    'footer footer footer';
+padding: 30px;   
+justify-items: center;
+}   
+
+
+/* grid layout */
+.content{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;  
+grid-template-areas: 'artikel1,artikel2,artikel3';
+grid-gap:20px;
+}
+
+img{
+width: 100%;
+height: auto;
+max-width:100%;height:auto;
+background-position: cover;
+transition: .2s;
+}
+    
+
+/* Artikel 1 */
+.post-img-1{
+margin-top: 20px;
+width: 100%;
+height: auto;
+background-size: cover;
+background-position: center;
+transition: .2s;
+}   
+
+/* Artikel 2 */
+.post-img-2{
+margin-top: 20px;
+width: 100%;
+height: auto;
+background-size: cover;
+background-position: center;
+transition: .2s;
+}   
+
+/* Artikel 3 */ 
+.post-img-3{
+margin-top: 20px;
+width: 100%;
+height: auto;
+background-size: cover;
+background-position: center;
+transition: .2s;
+}  
+
+/* skygge på bokse */
+.post{
+box-shadow: 0 2px 6px 1px rgba(0,0,0, .1);
+/* overflow hidden; */
+transition: .2s;
+}  
+
+/* bevægelse */
+.post:hover{
+transform: translateY(-4px);
+box-shadow: o 1px 14px 2px rgba(0,0,0, .15);
+}
+
+.post-body{
+padding: 20px;
+text-align: center;
+}
+
+/* dato tekst */
+.post-body span{
+display: inline-block;
+color: #999;
+margin-bottom: 10px;
+}
+
+/* artikel overskrift */
+.post-body h2{
+margin-bottom: 15px;
+}
+
+.post-body p{
+line-height: 1.5;
+margin-bottom: 20px;
+}
+
+/* Læs mere funktion */
+.post-body .post-link{
+display: block;
+text-decoration: none;
+padding: 10px;
+background: #2b6ebb;
+color: #fff;
+width: 50%;
+margin:auto;
+border-radius: 20px;
+box-shadow: 1px 2px 6px 1px rgba(0,0,0, .1);
+transition: .2s;
+}    
+
+.post-body .post-link:hover{
+background: #3378c3;
+box-shadow: 1px 2px 6px 1px rgba(0,0,0, .1);
+transform: translateY(-2px);
+}    
+
+/* responsiv artikler - VIKRER IKKE */
+
+@media only screen and (max-width: 600px) {
+    .navbar, .header, .post-image-1, .post-image-2, .post-image-3 {
+        width: 100%;
+        
+    }
+}
+    
+</body>
+</html>
+
+
