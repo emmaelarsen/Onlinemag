@@ -62,19 +62,13 @@ width: 100%;
 
 /*Artikel 1 */
 
-.artikel1 {
-margin-right: 10px;
-margin-left: 10px;
-    
-}
-
 /*Artikel 2 */ 
 
 
 /* Artikel 3 */
 
 
-/* responsiv artikler - VIKRER IKKE */
+/* responsiv artikler */
 
 @media only screen and (max-width: 600px) {
     .navbar, .header, .post-image-1, .post-image-2, .post-image-3 {
